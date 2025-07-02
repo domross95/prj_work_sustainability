@@ -1,0 +1,462 @@
+/****************************************************************/
+/*                                                              */
+/*          DEFINIZIONE DEGLI STILI PERSONALIZZATI              */
+/*    PER LA PAGINA DI DOWNLOAD DEI REPOPORT DI SOSTENIBILITÀ   */
+/*                    DEL BRAND PIRELLI                         */
+/*                                                              */
+/****************************************************************/
+
+/* definisco il font personalizzato tramite la regola @font-face */
+/* il file del font è posizionato nella cartella dedicata: 'assets/fonts' */
+@font-face {
+  /* definisco un nome al font personalizzato */
+  font-family: 'PirelliFont';
+  /* specifico il percorso del file per il font e il suo formato */
+  src: url('assets/fonts/GothamHTF-BookCondensed.woff') format('woff');
+  /* definisco il peso specifico del font */
+  font-weight: normal;
+  /* definisco lo stile per il font */
+  font-style: normal;
+  /* indico al browser come gestire il caricamento del font */
+  font-display: swap;
+}
+
+/* definisco una variante del font di tipo Medium */
+@font-face {
+  /* definisco un nome al font personalizzato */
+  font-family: 'PirelliFontMedium';
+  /* specifico il percorso del file per il font e il suo formato */
+  src: url('assets/fonts/GothamHTF-MediumCondensed.woff') format('woff');
+  /* definisco il peso specifico del font */
+  font-weight: normal;
+  /* definisco lo stile per il font */
+  font-style: normal;
+  /* indico al browser come gestire il caricamento del font */
+  font-display: swap;
+}
+
+/* definisco delle variabili (tavolozza dei colori) utilizzate per memorizzare i colori del brand */
+:root {
+  /* rosso brand Pirelli */
+  --pirelli-red: #d52b1e;
+  /* rosso brand Pirelli utilizzato al passaggio del mouse */
+  --pirelli-red-hover: #bb241a;
+  /* giallo brand Pirelli */
+  --pirelli-yellow: #fed100;
+  /* nero brand Pirelli */
+  --pirelli-black: #1a1a1a;
+  /* nero brand Pirelli utilizzato al passaggio del mouse */
+  --pirelli-black-hover: #333333;
+  /* grigio brand Pirelli */
+  --pirelli-grey: #f3f4f6;
+  /* grigio scuro brand Pirelli */
+  --pirelli-dark-gray: #6b6b6b;
+  /* bianco brand Pirelli */
+  --pirelli-white: #ffffff;
+}
+
+/* definisco uno stile generale per il bodu del documento */
+body {
+  /* definisco l'utilizzo del font PirelliFont in tutto il documento*/
+  font-family: "PirelliFont", "Inter", sans-serif;
+  /* definisco il colore  del testo */
+  color: var(--pirelli-black);
+  /* definisco il colore di sfondo generale della pagina */
+  background-color: var(--pirelli-grey);
+  /* definisco il padding superiore pari a 70px per evitare che del contenuto si nasconda sotto la navbar */
+  padding-top: 70px;
+}
+
+/* definisco una classe che imposta una larghezza pari a 20px */
+.w-20px {
+  width: 20px;
+}
+
+/* definisco una classe che imposta un'altezza pari a 25px */
+.h-25px {
+  height: 25px;
+}
+
+/* definisco una classe che imposta un'altezza pari a 30px */
+.h-30px {
+  height: 30px;
+}
+
+/* definisco una classe che imposta una larghezza pari al 51% */
+.w-51 {
+  width: 51%;
+}
+
+/* definisco una classe che imposta una larghezza pari al 55% */
+.w-55 {
+  width: 55%;
+}
+
+/* definisco una classe che imposta una larghezza pari al 57% */
+.w-57 {
+  width: 57%;
+}
+
+/* definisco una classe che imposta una larghezza pari al 60% */
+.w-60 {
+  width: 60%;
+}
+
+/* definisco una classe che imposta una larghezza pari a 80% */
+.w-80 {
+  width: 80%;
+}
+
+/* definisco una classe che imposta una larghezza pari a 60px */
+.w-60px {
+  width: 60px;
+}
+
+/* definisco una classe che imposta una larghezza pari a 80px */
+.w-80px {
+  width: 80px;
+}
+
+/* definisco una classe che imposta una larghezza pari a 96px */
+.w-96px {
+  width: 96px;
+}
+
+/* definisco una classe che imposta un'altezza pari a 96px */
+.h-96px {
+  height: 96px;
+}
+
+/* definisco una classe che imposta una larghezza massima raggiungibile pari a 800px */
+.w-max-800 {
+  max-width: 800px;
+}
+
+/* definisco una classe che imposta una larghezza massima raggiungibile pari a 900px */
+.w-max-900 {
+  max-width: 900px;
+}
+
+/***************************************/
+/* definisco dei colori personalizzati */
+/***************************************/
+/* sfondo rosso brand Pirelli*/
+.bg-pirelli-red {
+  background-color: var(--pirelli-red) !important;
+}
+
+/* testo rosso brand Pirelli */
+.text-pirelli-red {
+  color: var(--pirelli-red) !important;
+}
+
+/* bordo rosso brand Pirelli */
+.border-pirelli-red {
+  border-color: var(--pirelli-red) !important;
+}
+
+/* sfondo nero brand Pirelli */
+.bg-pirelli-black {
+  background-color: var(--pirelli-black) !important;
+}
+
+/* sfondo giallo brand Pirelli */
+.bg-pirelli-yellow {
+  background-color: var(--pirelli-yellow) !important;
+}
+
+/* testo grigio scuro brand Pirelli */
+.text-pirelli-dark-gray {
+  color: var(--pirelli-dark-gray) !important;
+}
+
+/* testo giallo brand Pirelli */
+.text-pirelli-yellow {
+  color: var(--pirelli-yellow) !important;
+}
+
+/**************************************/
+/* definisco le regole per i pulsanti */
+/**************************************/
+/* pulsante rosso */
+.btn-pirelli-red {
+  /* definisco lo sfondo rosso brand Pirelli*/
+  background-color: var(--pirelli-red);
+  /* definisco il colore del testo bianco brand Pirelli */
+  color: var(--pirelli-white);
+  /* definisco il colore del bordo rosso brand Pirelli */
+  border-color: var(--pirelli-red);
+  /* definisco l'effetto di transizione */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* gestione effetto hover sul pulsante rosso */
+.btn-pirelli-red:hover {
+  /* definisco lo sfondo rosso chiaro brand Pirelli al passaggio del mouse */
+  background-color: var(--pirelli-red-hover);
+  /* definisco il colore del bordo rosso chiaro brand Pirelli */
+  border-color: var(--pirelli-red-hover);
+  /* definisco l'effetto di ingrandimento al passaggio del mouse */
+  transform: scale(1.05);
+}
+
+/* pulsante nero */
+.btn-pirelli-black {
+  /* definisco lo sfondo nero brand Pirelli */
+  background-color: var(--pirelli-black);
+  /* definisco il colore del testo bianco brand Pirelli */
+  color: var(--pirelli-white);
+  /* definisco il colore del bordo nero brand Pirelli */
+  border-color: var(--pirelli-black);
+  /* definisco l'effetto di transizione */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* gestione effetto hover sul pulsante nero */
+.btn-pirelli-black:hover {
+  /* definisco lo sfondo nero chiaro brand Pirelli al passaggio del mouse */
+  background-color: var(--pirelli-black-hover);
+  /* definisco il colore del bordo nero chiaro brand Pirelli */
+  border-color: var(--pirelli-black-hover);
+  /* definisco l'effetto di ingrandimento al passaggio del mouse */
+  transform: scale(1.05);
+}
+
+/* definisco lo stile per il link attivo nella navbar */
+.nav-link.active-link-pirelli {
+  /* definisco il colore del testo rosso brand Pirelli */
+  color: var(--pirelli-red) !important;
+}
+
+/* definisco la transizione della card */
+.card-hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* gestione effetto hover sulla card */
+.card-hover-lift:hover {
+  /* al passaggio del mouse alzo leggermente la card */
+  transform: translateY(-5px);
+  /* al passaggio del mouse aumento l'ombra */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* gestione hero section del documento */
+.hero-section {
+  /* posiziono la sezione in maniera relativa per permettere il posizionamento assoluto degli elementi child */
+  position: relative;
+  /* definisco lo sfondo nero brand Pirelli */
+  background-color: var(--pirelli-black);
+  /* definisco il colore del testo bianco */
+  color: var(--pirelli-white);
+  /* definisco del padding verticale di 5rem utile anche per la modalità responsive */
+  padding: 5rem 0;
+  /* nascondo qualsiasi contenuto che fuoriesce dai bordi dell'elemento */
+  overflow: hidden;
+  /* definisco l'immagine di sfondo (fonte: sito Pirelli https://corporate.pirelli.com/corporate/it-it/sostenibilita/sostenibilita) */
+  background-image: url('assets/imgs/pirelli_sostenibilita.jpg');
+  /* l'immagine deve coprire l'intera area */
+  background-size: cover;
+  /* centro l'immagine verticalmente ed orizzontalmente */
+  background-position: center center;
+  /* impedisco che l'immagine venga ripetuta */
+  background-repeat: no-repeat;
+  /* posiziono l'elemento sopra il contenuto principale */
+  z-index: 1;
+  /* definisco un padding superiore pari a 190px per spostare verso il basso il contenuto */
+  padding-top: 190px;
+  /* definisco un' altezza minima del contenitore pari a 600px */
+  min-height: 600px;
+}
+
+/* definisco uno pseudo-elemento ::before per la sezione hero */
+.hero-section::before {
+  /* creo uno pseudo-elemento vuoto */
+  content: "";
+  /* posiziono l'elemento in modo assoluto rispetto al genitore con position relative */
+  position: absolute;
+  /* allineo l'elemento al bordo superiore del genitore */
+  top: 0;
+  /* allineo l'elemento al bordo sinistro del genitore */
+  left: 0;
+  /* imposto una larghezza pari al 100% del genitore */
+  width: 100%;
+  /* imposto un'altezza pari al 100% del genitore */
+  height: 100%;
+  /* definisco un colore di sfodno semi-trasparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* posiziono l'elemento dietro il contenuto principale */
+  z-index: 0;
+}
+
+/* definisco la classe per il contenitore del contenuto della hero section */
+.hero-content {
+  /* posiziono il contenuto relativamente al genitore per evitare che venga schiacciato da elementi con position absolute */
+  position: relative;
+  /* mi assicuro che il contenuto sia visibile sopra l'immagine di sfondo (che ha z-index: 0) */
+  z-index: 1;
+}
+
+/* definisco un'animazione che fa apparire un elemento sbiadendolo */
+@keyframes fadeIn {
+
+  /* definisco lo stato iniziale dell'animazione */
+  from {
+    /* l'elemento è completamente trasparente */
+    opacity: 0;
+  }
+
+  /* definisco lo stato finale dell'animazione */
+  to {
+    /* l'eleemento è completamente opaco */
+    opacity: 1;
+  }
+}
+
+/* definisco un'animazione che fa apparire un elemento sbiadendolo e muovendolo verso l'alto */
+@keyframes fadeInUp {
+
+  /* definisco lo stato iniziale dell'animazione */
+  from {
+    /* l'elemento è completamente trasparente */
+    opacity: 0;
+    /* l'elemento viene traslato di 20 pixel verso il basso */
+    transform: translateY(20px);
+  }
+
+  /* definisco lo stato finale dell'animazione */
+  to {
+    /* l'elemento è completamente opaco */
+    opacity: 1;
+    /* l'elemento ritorna nella sua posizione originale */
+    transform: translateY(0);
+  }
+}
+
+/* definisco la classe che applica l'animazione 'fadeIn' a un elemento */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* definisco la classe che applica l'animazione 'fadeInUp' a un elemento */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* definisco una classe che rende le immagini responsive, adattandole alla larghezza del contenitore */
+.img-fluid {
+  /* imposto una larghezza massima dell'immagine pari al 100% del suo contenitore */
+  max-width: 100%;
+  /* imposto un'altezza automatica mantendento le proporzioni dell'immagine invariate */
+  height: auto;
+}
+
+/* definisco una classe per l'area interna del carosello */
+.carousel-inner {
+  /* annullo il comportamento di overflow predefinito, permettendo al contenuto di sporgere se necessario */
+  overflow: unset;
+}
+
+/* definisco gli stili per i controlli del carosello */
+.carousel-control-prev,
+.carousel-control-next {
+  /* imposto una larghezza pari al 5% per non coprire troppo il contenuto del carosello */
+  width: 5%;
+  /* definisco un colore di sfondo semi-trasparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* definisco un bordo arrotondato per i controlli rendendoli circolari */
+  border-radius: 50%;
+  /* definisco una altezza fissa pari a 60px */
+  height: 60px;
+  /* definisco una larghezza fissa pari a 60px */
+  width: 60px;
+  /* definisco un margine automatico per centrare i controlli */
+  margin: auto;
+  /* definisco un'opacità pari a 0.7 */
+  opacity: 0.7;
+  /* definisco una transizione per l'opacità e il colore di sfondo */
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* definisco gli stili per i controlli del carosello al passaggio del mouse */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  /* aumento l'opacità al passaggio del mouse */
+  opacity: 1;
+  /* rendo lo sfondo più scuro passaggio del mouse */
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* definisco gli stili per le icone dei controlli del carosello */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /* definisco una dimensione dell'icona pari a 1.5rem */
+  font-size: 1.5rem;
+}
+
+/************************************************************************/
+/* definisco dei nuovi stili per le card che contengono le progress bar */
+/************************************************************************/
+/* definisco lo stile per le schede all'interno della sezione con id 'environmentalCommitment' */
+#environmentalCommitment .card {
+  /* definisco un posizionamento relativo per permettere il posizionamento assoluto dello pseudo-elemento ::before */
+  position: relative;
+  /* rimuovo il bordo predefinito delle schede */
+  border: none;
+  /* aggiungo un padding a sinistra di 2.5rem, sovrascrivendo eventuali altri stili (usando !important) */
+  padding-left: 2.5rem !important;
+  /* nascondo qualsiasi contenuto che fuoriesce dai bordi della card */
+  overflow: hidden;
+}
+
+/* definisco lo pseudo-elemento ::before per le card, usato per creare una barra colorata sul bordo sinistro */
+#environmentalCommitment .card::before {
+  /* creo uno pseudo-elemento vuoto */
+  content: '';
+  /* posiziono l'elemento in modo assoluto rispetto al suo genitore (card) */
+  position: absolute;
+  /* allineo l'elemento al bordo superiore del genitore */
+  top: 0;
+  /* allineo l'elemento al bordo sinistro del genitore */
+  left: 0;
+  /* imposto una larghezza pari a 0.5rem */
+  width: .5rem;
+  /* imposto un'altezza pari al 100% dell'altezza del genitore */
+  height: 100%;
+  /* imposto il colore di sfondo rosso brand Pirelli */
+  background-color: var(--pirelli-red);
+}
+
+/* definisco lo stile per il bottone "Torna su" */
+.go-to-top {
+  /* imposto la posizione fissa rispetto alla finestra del browser */
+  position: fixed;
+  /* posiziono il bottone a 20px dal bordo inferiore */
+  bottom: 20px;
+  /* posiziono il bottone a 20px dal bordo destro */
+  right: 20px;
+  /* mi assicuro che il contenuto sia visibile sopra ogni altro elemento della pagina */
+  z-index: 1000;
+  /* imposto una larghezza fissa per il bottone pari a 50px */
+  width: 50px;
+  /* imposto un'altezza fissa per il bottone pari a 50px */
+  height: 50px;
+  /* utilizzo flexbox per centrare il contenuto */
+  justify-content: center;
+  /* allineo verticalmente il contenuto al centro */
+  align-items: center;
+  /* nascondo il bottone di default, verrà gestito tramite JavaScript quando l'utente scorre la pagina */
+  display: none;
+}
+
+/* definisco il colore dell'icona del pulsante "Torna su" */
+.go-to-top svg {
+  /* imposto il colore dell'icona SVG su bianco brand Pirelli */
+  color: var(--pirelli-white);
+}
+
+/* definisco il colore dell'icona del pulsante "Torna su" quando è cliccato */
+.go-to-top:active svg {  
+  /* imposto il colore dell'icona bianco brand Pirelli */
+  color: var(--pirelli-black);
+}
